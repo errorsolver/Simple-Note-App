@@ -5,7 +5,7 @@ import './Layout.css';
 import './Writeable-Note.css'
 
 const WriteableNote = () => {
-    const { title, text, setTitle, setText, saveNote, note, handleNewNote } = useContext(NoteContext);
+    const { title, text, setTitle, setText } = useContext(NoteContext);
 
     return (
         <div className='note d-flex'>

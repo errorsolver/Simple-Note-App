@@ -17,7 +17,7 @@ const Layout = () => {
                         <p>Github: @errorsolver <br />
                         Create with React <br />
                         Create at: May 2025 <br />
-                        Ver 1.0.0</p>
+                        Ver 1.0.1</p>
                     </span>
                 </h1>
             </header>
@@ -33,6 +33,7 @@ const Layout = () => {
             </div>
 
             <footer>
+                <p>@errorsolver</p>
                 <p>&copy; 2025 Simple Note App</p>
             </footer>
         </div>

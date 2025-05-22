@@ -12,7 +12,7 @@
 .card {
     position: relative;
     flex-direction: column;
-    
+
     aspect-ratio: 5/4;
     gap: 10px;
     padding: 0;
@@ -35,6 +35,15 @@
     overflow-x: hidden;
     padding: 8px;
     margin: 0;
+}
+
+.card>p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: pre-line;
+
+    height: 100%;
 }
 
 .card>button {

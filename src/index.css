@@ -36,7 +36,6 @@ body {
   background-image: url(./assets/bg-sticky-notes.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  backdrop-filter: grayscale(30%);
 }
 
 h1 {

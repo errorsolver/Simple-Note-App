@@ -37,6 +37,7 @@ Below, write all the contents of your note~ Free and unlimited!` }]);
             }
             isInitialLoad.current = false
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(function SaveNotesChange() {
@@ -56,22 +57,27 @@ Below, write all the contents of your note~ Free and unlimited!` }]);
 
                     )
                 );
-                console.log(title)
-                console.log(text)
             }
         }, refreshTime)
 
         return () => clearTimeout(timeout);
-    }, [title, text]);
+    }, [title, text, selectedNoteId]);
 
     const handleNewNote = () => {
+        setNotes((prevNotes) =>
+            prevNotes.map((note) =>
+                note.id === selectedNoteId ? { ...note, title, text } : note
+            )
+        );
+
         const newNote = {
             id: Date.now(),
-            title,
-            text,
+            title: '',
+            text: '',
         };
 
         setNotes([...notes, newNote]);
+        setSelectedNoteId(newNote.id);
         setTitle("");
         setText("");
     };
