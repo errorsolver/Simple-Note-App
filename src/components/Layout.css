@@ -1,0 +1,129 @@
+header,
+footer {
+    text-align: center;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    height: 100%;
+
+    overflow: hidden;
+    padding: 0 10px;
+
+    border-radius: 5px;
+    background-color: #f7f7deb0;
+}
+
+aside>button {
+    padding: 6px;
+    position: sticky;
+    margin-bottom: 8px;
+    top: 8px;
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    margin-left: 10px;
+
+    grid-area: main;
+}
+
+footer {
+    background-color: rgba(237, 237, 237, 0.538);
+    margin: 10px 0 0 0;
+    padding: 10px;
+}
+
+footer>p {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ----------------------------------- */
+
+.card .note {
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.layout {
+    display: grid;
+    gap: 10px;
+    height: 100dvh;
+
+    background-color: rgba(255, 255, 255, .15);
+}
+
+.main-content {
+    display: grid;
+    margin: 10px;
+    height: 100%;
+
+    flex: 1;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 'aside main';
+    overflow: hidden;
+}
+
+.tooltiptext {
+    display: block;
+
+    padding: 10px;
+    visibility: hidden;
+    width: 10rem;
+
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: left;
+
+    position: absolute;
+    top: 10%;
+    right: 32%;
+
+    background-color: rgba(0, 0, 0, 0.604);
+    color: #fff;
+
+    z-index: 2;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltiptext>p {
+    margin: 0;
+}
+
+/* ----------------Global------------------- */
+
+.d-flex {
+    display: flex;
+}
+
+/* ------------------Responsive----------------- */
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 35px;
+        margin-bottom: 0;
+    }
+
+    .main-content {
+        gap: 10px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: "aside aside"
+            "main main";
+    }
+
+    footer {
+        padding: 0;
+    }
+}

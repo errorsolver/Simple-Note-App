@@ -1,0 +1,8 @@
+.scroll-v {
+    overflow-y: scroll;
+}
+
+.scroll-v>div {
+    display: grid;
+    gap: 10px;
+}
